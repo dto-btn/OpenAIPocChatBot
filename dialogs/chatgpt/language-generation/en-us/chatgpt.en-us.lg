@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# SendActivity_BWkdm9()
+[Activity
+    Text = ${SendActivity_BWkdm9_text()}
+]
+
+# SendActivity_BWkdm9_text()
+- ${turn.results.content.answer}
+# TextInput_Prompt_SFGBlv()
+[Activity
+    Text = ${TextInput_Prompt_SFGBlv_text()}
+]
+
+# TextInput_Prompt_SFGBlv_text()
+- ${if(turn.results.content.answer, turn.results.content.answer, "What is your question?")}

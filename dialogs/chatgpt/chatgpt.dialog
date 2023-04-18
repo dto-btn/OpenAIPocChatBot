@@ -1,0 +1,74 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "M3AtJ1",
+    "name": "chatgpt",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "eWU6PW"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "SFGBlv"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "property": "user.prompt",
+          "prompt": "${TextInput_Prompt_SFGBlv()}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "Zlxexp"
+          },
+          "resultProperty": "turn.results",
+          "method": "POST",
+          "url": "https://scdc-cio-dto-openai-poc-app--poc.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io//prompt",
+          "body": "{\"prompt\":\"${user.prompt}\"}",
+          "contentType": "application/json",
+          "responseType": "json"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "BWkdm9"
+          },
+          "activity": "${SendActivity_BWkdm9()}",
+          "disabled": true
+        },
+        {
+          "$kind": "Microsoft.DeleteProperty",
+          "$designer": {
+            "id": "EC4QxU"
+          },
+          "property": "user.prompt"
+        },
+        {
+          "$kind": "Microsoft.RepeatDialog",
+          "$designer": {
+            "id": "DHrVm5"
+          },
+          "activityProcessed": true,
+          "allowLoop": true
+        }
+      ]
+    }
+  ],
+  "generator": "chatgpt.lg",
+  "recognizer": "chatgpt.lu.qna",
+  "id": "chatgpt"
+}
