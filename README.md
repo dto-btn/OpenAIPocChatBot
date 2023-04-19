@@ -2,6 +2,17 @@
 
 This bot project was created using the Empty Bot template, and contains a minimal set of files necessary to have a working bot.
 
+## Dev
+
+### Deploying via VS Code Azure App Service 
+
+1) Select your subscription and Web App resource in the Azure pane (`Shift+Alt+A`)
+2) Right click on the *Web App* resource you want to deploy to and select deploy to ...
+
+### Manual building and deploying
+
+TODO
+
 ## Next steps
 
 ### Start building your bot
