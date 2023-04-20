@@ -11,7 +11,8 @@ This bot project was created using the Empty Bot template, and contains a minima
 
 ### Manual building and deploying
 
-TODO
+* [Follow those important steps](https://learn.microsoft.com/en-us/azure/bot-service/provision-and-publish-a-bot?view=azure-bot-service-4.0&tabs=userassigned%2Cjavascript#update-project-configuration-settings)
+* The Azure Web App is using Linux and Node 14 LTS.
 
 ## Next steps
 
@@ -36,3 +37,7 @@ From Package Manager in Composer you can find useful packages to help add additi
 ### Extend your bot with code
 
 You can also extend your bot with code - simply open up the folder that was generated for you in the location you chose during the creation process with your favorite IDE (like Visual Studio). You can do things like create custom actions that can be used during dialog flows, create custom middleware to pre-process (or post-process) messages, and more. See [our documentation](https://aka.ms/bf-extend-with-code) for more information.
+
+### Bot authentication
+
+[Bot Authentication](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-authentication-types?wt.md_id=searchAPI_azureportal_inproduct_rmskilling&sessionId=412ebb1c5ad4403d89c6ff88426d2cc6&view=azure-bot-service-4.0#bot-authentication)
