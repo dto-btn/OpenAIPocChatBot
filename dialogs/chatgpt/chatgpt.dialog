@@ -37,8 +37,8 @@
           },
           "resultProperty": "turn.results",
           "method": "POST",
-          "url": "https://scdc-cio-dto-openai-poc-app--poc.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/prompt",
-          "body": "{\"prompt\":\"${user.prompt}\"}",
+          "url": "https://scdc-cio-dto-openai-poc-app--5mq2032.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/query",
+          "body": "{\"query\":\"${user.prompt}\"}",
           "contentType": "application/json",
           "responseType": "json"
         },
