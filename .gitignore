@@ -3,3 +3,4 @@ generated/
 *.log
 .vscode/
 .deployment
+*/**/*.zip
